@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src='https://cdn.plot.ly/plotly-latest.min.js'></script> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+  <!-- <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 450px
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      }
+    }
+
+    body {
+      font-family: Sans-serif;
+      font-size: 30px;
+    }
+
+    .slice {
+      cursor: pointer;
+    }
+
+    .slice .main-arc {
+      stroke: #fff;
+      stroke-width: 1px;
+    }
+
+    .slice .hidden-arc {
+      fill: none;
+    }
+
+    .slice text {
+      pointer-events: none;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+  </style> -->
+</head>
+
+<body>
+  <div class="container container-body">
+    <div class="row">
+      <div class="col-12 col-md-12 ">
+        <div class="info-graph">
+          <a class="info-graph-filter">
+            <img src="assets/images/tab_filter_ui.svg" data-toggle="modal" data-target="#exampleModal"
+              alt="tab_filter_ui">
+            <span>2</span>
+          </a>
+          <div id="myDiv1">
+          </div>
+        </div>
+        <ul id="carasoul-view" class="list-unstyled list-inline info-graph-carousel">
+          <li class="list-inline-item info-graph-carousel-text">
+            Liver
+          </li>
+          <li class="list-inline-item info-graph-carousel-text active">
+            Dermatology
+          </li>
+          <li class="list-inline-item info-graph-carousel-text">
+            Hepatology
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modalCustom">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Phase</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+          <img class="closeBtn" data-dismiss="modal" src="assets/images/circle_arrow_right.svg" alt="icon">
+
+        </div>
+        <div class="modal-body" style="padding: 0px; margin-top: -17px;">
+          <div class="line"></div>
+          <div id="myDiv2"></div>
+        </div>
+        <!-- <img class="blank circle" src="../../assets/Path 2531.svg" alt="icon"> -->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src='js/HttpManager.js'></script>
+  <script src='js/main.js'></script>
+  <script src='js/filter.js'></script>
+</body>
+
+</html>
